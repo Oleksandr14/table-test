@@ -1,0 +1,227 @@
+body {
+    background-color: #19193d;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+    color: inherit;
+}
+
+img {
+  display: block;
+}
+
+.content {
+    margin: 0 auto;
+    max-width: 760px;
+    background-color: #edf0f6;
+}
+
+.content__wrap {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    padding: 15px;
+}
+
+.title {
+    text-align: center;
+    color: #33373c;
+}
+
+.pricing {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.pricing-column {
+    flex-basis: calc(100% / 4);
+    background-color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 1px 1px -1px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 1px 1px -1px rgba(0,0,0,0.75);
+box-shadow: 0px 1px 1px -1px rgba(0,0,0,0.75);
+}
+
+.pricing-column:hover {
+    transform: scaleY(1.05);
+    border: 2px solid #9fcd2e;
+}
+
+.pricing-column:hover .btn {
+    background-color: #9fcd2e;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.btn:active {
+    transform: translateY(1px);
+  }  
+
+.pricing-column__wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+    padding: 12px;
+    overflow: hidden;
+}
+
+.pricing-column__wrapper--popular {
+    position: absolute;
+    top: 11px;
+    right: -21px;
+    transform: rotate(45deg);
+    padding: 3px 18px;
+    color: #fff;
+    background-color: #e53e50;
+    font-size: 10px;
+
+
+    -webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+}
+
+.pricing-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+}
+
+.pricing-info__title {
+    color: #33373c;
+}
+
+.cost {
+    color: #1b3147;
+    
+}
+
+.cost__value {
+    font-size: 48px;
+}
+
+.cost__period {
+    color: #787878;
+}
+
+.pricing-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 13px;
+    color: #5c5c5c;
+    font-size: 12px;
+}
+
+.pricing-list__icon {
+    margin-right: 3px;
+    padding: 2px;
+    border: 1px solid #9fcd2e;
+    border-radius: 50%;
+    fill: #9fcd2e;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 7px 46px;
+    font-size: 10px;
+    background-color: transparent;
+    border: 1px solid #d6dbdd;
+    border-radius: 5px;
+    color: #2e9eda;  
+    cursor: pointer;
+
+    transition: all 200ms ease;
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+    .content__wrap {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        padding: 10px;
+    }
+
+    .pricing {
+        gap: 10px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    .pricing-column {
+        flex-basis: calc((100% - 10px) / 2);
+        height: 245px;
+    }
+
+    .pricing-column__wrapper {
+        justify-content: space-between;
+        padding: 8px;
+    }
+
+    .pricing-column__wrapper--popular {
+        font-size: 8px;
+    }
+    
+    .pricing-info {
+        row-gap: 20px;
+    }
+
+    .cost__value {
+        font-size: 38px;
+    }
+
+    .pricing-list {
+        row-gap: 9px;
+        font-size: 10px;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 4px 32px;
+        font-size: 10px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+    .content {
+      row-gap: 20px;
+      max-width: 380px;     
+    }
+
+    .title {
+        font-size: 18px;
+    }
+
+    .pricing {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 10px;
+    }
+
+    .pricing-column {
+        width:100%;
+    }
+}
