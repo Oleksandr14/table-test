@@ -452,3 +452,41 @@ box-shadow: 0px 1px 1px -1px rgba(0,0,0,0.75);
   .is-hidden-btn {
     display: none;
   }
+
+  @media (min-width: 320px) and (max-width: 768px) {
+    .table-section {
+        padding: 5px 0;
+    }
+
+    .table-wrapper {
+        row-gap: 8px;
+    }
+
+    .list {
+        column-gap: 3px;
+
+    }
+
+    .list-btn {
+        font-size: 12px;
+    }
+
+    .table-title {
+        font-size: 18px;
+    }
+
+    .table {
+
+        width: 60%;
+    font-size: 12px;  
+    }
+
+  .table__heading,
+  .table__data {
+    padding: 4px;
+  }
+
+  .table__button {
+    padding: 2px 4  px;
+  }
+  }
