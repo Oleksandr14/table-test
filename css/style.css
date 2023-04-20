@@ -1,4 +1,5 @@
 body {
+    padding-top: 15px;
     background-color: #19193d;
 }
 
@@ -26,10 +27,16 @@ img {
   display: block;
 }
 
-.content {
+.container {
     margin: 0 auto;
+    max-width: 1280px;
+}
+
+.content {
+    margin: 0 auto 40px;
     max-width: 760px;
     background-color: #edf0f6;
+    height: 410px;
 }
 
 .content__wrap {
@@ -147,7 +154,7 @@ box-shadow: 0px 1px 1px -1px rgba(0,0,0,0.75);
 .btn {
     display: inline-block;
     padding: 7px 46px;
-    font-size: 10px;
+    font-size: 9px;
     background-color: transparent;
     border: 1px solid #d6dbdd;
     border-radius: 5px;
@@ -158,6 +165,10 @@ box-shadow: 0px 1px 1px -1px rgba(0,0,0,0.75);
 }
 
 @media (min-width: 769px) and (max-width: 1023px) {
+    .content {
+        height: unset;
+    }
+
     .content__wrap {
         display: flex;
         flex-direction: column;
@@ -209,6 +220,7 @@ box-shadow: 0px 1px 1px -1px rgba(0,0,0,0.75);
     .content {
       row-gap: 20px;
       max-width: 380px;     
+      height: unset;
     }
 
     .title {
@@ -225,3 +237,218 @@ box-shadow: 0px 1px 1px -1px rgba(0,0,0,0.75);
         width:100%;
     }
 }
+
+/*------------------Table-------------------------*/
+
+.table-section {
+    padding: 15px 0;
+    background-color: #0c4c74;
+}
+
+.table-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 15px;
+}
+
+.list {
+    display: flex;
+    column-gap: 5px;
+}
+
+.list-btn {
+    padding: 2px 3px;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+}
+
+.list-btn:hover {
+    opacity: 0.8;
+}
+
+.list-btn:active {
+    transform: translateY(1px);
+}
+
+.table-title {
+    text-align: center;
+    color: #fff;
+}
+
+.table {
+    border-collapse: collapse;
+    width: 80%;
+    color: #fff;
+  }
+  
+  .table__heading,
+  .table__data {
+    border: 1px solid #fff;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .table__heading {
+    cursor: pointer;
+  }
+  
+  .table__heading:hover {
+    color: #000;
+    background-color: #ddd;
+  }
+  
+  .table__body .table__road:nth-child(odd) {
+    background-color: #108cc6;
+  }
+  
+  .table__button {
+    padding: 4px 8px;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    cursor: pointer;
+
+    transition: all 200ms ease;
+  }
+
+  .table__button:hover {
+    background-color: #fff;
+    color: #000;
+  }
+
+  .table__button:active {
+    transform: translateY(1px);
+  }  
+
+  .button {
+    display: inline-block;
+    padding: 10px 46px;
+    font-size: 14px;
+    background-color: transparent;
+    border: 1px solid #d6dbdd;
+    border-radius: 5px;
+    color: #fff;  
+    cursor: pointer;
+
+    transition: all 200ms ease;
+  }
+
+  .button:hover {
+    background-color: #fff;
+    color: #000;
+  }
+
+  .button:active {
+    transform: translateY(2px);
+  }  
+
+  /*----Form----------*/
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 16px;
+    border-radius: 5px;
+  }
+
+  .form__iput--wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .form__label {
+    font-weight: bold;
+  }
+  
+ .form__input {
+    padding: 7px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .form__button{
+    padding: 8px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 200ms ease;
+  }
+  
+  .form__button:hover {
+    background-color: #0069d9;
+  }
+  
+  /*-----------------Backdrop---------*/
+
+  .is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .backdrop {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 2;
+  
+    opacity: 1;
+    transition: opacity 250ms ease;
+  
+    overflow-y: scroll;
+  }
+  
+  .backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+
+  /*-----------------Modal---------*/
+
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 40px;
+    background-color: #fff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms ease;
+  }
+
+  .modal__close--btn {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    display: inline-block;
+    background-color: transparent;
+    border: 1px solid #0069d9;
+    border-radius: 50%;
+    cursor: pointer;
+
+    transition: color 200ms ease;
+  }
+
+  .modal__close--btn:hover {
+    color: #0069d9;
+  }
+
+  .is-hidden-btn {
+    display: none;
+  }
